@@ -1,0 +1,22 @@
+---
+
+- name: Test distribution
+  assert:
+    that: ansible_os_family == "RedHat"
+
+- name: Install elasticsearch package for RedHat
+  yum:
+    pkg: elasticsearch
+    state: installed
+
+- name: Configure ES for certain hosts to be able to connect
+  template:
+    src: elasticsearch.yml.j2
+    dest: /etc/elasticsearch/elasticsearch.yml
+  notify: Restart elasticsearch
+
+- name: Start elasticsearch services
+  service:
+    name: elasticsearch
+    enabled: yes
+    state: started

@@ -1,0 +1,4 @@
+---
+
+# Default elasticsearch configuration
+elasticsearch_config: {}
