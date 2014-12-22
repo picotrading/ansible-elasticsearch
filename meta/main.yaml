@@ -16,3 +16,6 @@ dependencies:
         name: Elasticsearch repository for 1.4.x packages
         baseurl: http://packages.elasticsearch.org/elasticsearch/1.4/centos
         gpgcheck: 0
+  - role: oracle_java
+    oracle_java_version_minor: 7
+    oracle_java_finish: yes

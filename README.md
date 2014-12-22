@@ -44,6 +44,7 @@ Dependencies
 ------------
 
 * [`yumrepo`](https://github.com/picoglobal/ansible-yumrepo) role
+* [`oracle-java`](https://github.com/picoglobal/ansible-oracle_java) role
 
 
 License
