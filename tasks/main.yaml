@@ -6,7 +6,7 @@
 
 - name: Install elasticsearch package for RedHat
   yum:
-    pkg: elasticsearch
+    name: elasticsearch
     state: installed
 
 - name: Configure ES for certain hosts to be able to connect
