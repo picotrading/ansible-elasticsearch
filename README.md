@@ -43,8 +43,8 @@ elasticsearch_config: {}
 Dependencies
 ------------
 
-* [`yumrepo`](https://github.com/picoglobal/ansible-yumrepo) role
-* [`oracle-java`](https://github.com/picoglobal/ansible-oracle_java) role
+* [`yumrepo`](https://github.com/picotrading/ansible-yumrepo) role
+* [`oracle-java`](https://github.com/picotrading/ansible-oracle_java) role
 
 
 License
