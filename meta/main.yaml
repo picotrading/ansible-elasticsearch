@@ -12,8 +12,5 @@ galaxy_info:
   categories:
     - system
 dependencies:
-  - role: yumrepo
-    yumrepo_repos: "{{ elasticsearch_yum_repo }}"
-  - role: oracle_java
-    oracle_java_version_minor: 7
-    oracle_java_finish: yes
+  - yumrepo
+  - oracle_java

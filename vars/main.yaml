@@ -1,0 +1,12 @@
+---
+
+# Default elasticsearch YUM repo
+yumrepo_repos:
+  elasticsearch-1.4:
+    name: Elasticsearch repository for 1.4.x packages
+    baseurl: "{{ elasticsearch_yum_repo_url }}"
+    gpgcheck: 0
+
+# Default Java settings
+oracle_java_version_minor: 7
+oracle_java_finish: yes
