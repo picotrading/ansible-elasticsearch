@@ -8,12 +8,17 @@
   yum:
     name: elasticsearch
     state: installed
+  tags:
+    - elasticsearch_pkg
 
 - name: Configure ES for certain hosts to be able to connect
   template:
     src: elasticsearch.yml.j2
     dest: /etc/elasticsearch/elasticsearch.yml
-  notify: Restart elasticsearch
+  notify:
+    - Restart elasticsearch
+  tags:
+    - elasticsearch_config
 
 - name: Start elasticsearch services
   service:
