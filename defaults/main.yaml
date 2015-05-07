@@ -1,7 +1,10 @@
 ---
 
-# Default elasticsearch configuration
-elasticsearch_config: {}
-
 # Default YUM repo URL
 elasticsearch_yum_repo_url: http://packages.elasticsearch.org/elasticsearch/1.4/centos
+
+# Package to be installed (you can force a specific version here)
+elasticsearch_pkg: elasticsearch
+
+# Default elasticsearch configuration
+elasticsearch_config: {}

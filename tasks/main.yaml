@@ -6,8 +6,10 @@
 
 - name: Install elasticsearch package for RedHat
   yum:
-    name: elasticsearch
+    name: "{{ elasticsearch_pkg }}"
     state: installed
+  notify:
+    - Restart elasticsearch
   tags:
     - elasticsearch_pkg
 
