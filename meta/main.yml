@@ -13,9 +13,10 @@ galaxy_info:
     - system
 dependencies:
   - role: common/yumrepo
+    when: ansible_pkg_mgr == "yum"
     yumrepo_repos:
-      elasticsearch-1.4:
-        name: Elasticsearch repository for 1.4.x packages
+      elasticsearch:
+        name: Elasticsearch repository for {{ elasticsearch_version }}.x packages
         baseurl: "{{ elasticsearch_yum_repo_url }}"
         gpgcheck: 0
   - common/elasticsearch
