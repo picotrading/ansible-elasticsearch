@@ -1,0 +1,4 @@
+- name: Import Elasticsearch key
+  apt_key:  url=https://packages.elastic.co/GPG-KEY-elasticsearch state=present
+- name: Add Elasticsearch Repo
+  apt_repository: repo="deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" state=present

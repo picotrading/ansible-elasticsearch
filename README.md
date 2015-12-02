@@ -22,6 +22,7 @@ Example
 - hosts: myhost2
   roles:
     - role: common/elasticsearch
+      elasticsearch_version: 1.4
       elasticsearch_config:
         # Accept only localhost connections
         network.bind_host: "127.0.0.1"
@@ -36,6 +37,15 @@ List of variables used by the role:
 
 ```
 # Default elasticsearch configuration
+elasticsearch_version: 2.x
+# available versions are:
+#   0.90
+#   1.3
+#   1.4
+#   1.5
+#   1.6
+#   1.7
+#   2.x
 elasticsearch_config: {}
 ```
 

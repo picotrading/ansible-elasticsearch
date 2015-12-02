@@ -1,13 +1,10 @@
 ---
+- name: Add apt-repo for Debian/Ubuntu
+  include: add-apt-repo.yaml
+  when: ansible_pkg_mgr == "apt"
 
-- name: Test distribution
-  assert:
-    that: ansible_os_family == "RedHat"
-
-- name: Install elasticsearch package for RedHat
-  yum:
-    name: "{{ elasticsearch_pkg }}"
-    state: present
+- name: Install elasticsearch package
+  action: "{{ ansible_pkg_mgr }} name={{ elasticsearch_pkg }} state=present"
   notify:
     - Restart elasticsearch
   tags:
